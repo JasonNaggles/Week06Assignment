@@ -105,6 +105,7 @@ async playCards(playerOne, playerTwo) {
 
         playerOneTotalScore.innerHTML = `Score: ${playerOne.score}`;
         playerTwoTotalScore.innerHTML = `Score: ${playerTwo.score}`;
+        await this.timer(600);
         }
     }
 }
