@@ -1,4 +1,4 @@
-var expect = require(chai).expect;
+var expect = chai.expect;
 
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
