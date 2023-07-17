@@ -107,9 +107,49 @@ async playCards(playerOne, playerTwo) {
         playerTwoTotalScore.innerHTML = `Score: ${playerTwo.score}`;
         await this.timer(600);
         }
+
+        // Checks the winner
+        if (playerOne.score > playerTwo.score) {
+            winner.innerHTML = `${playerOne.name} Wins!!!`;
+        } else if (playerOne.score < playerTwo.score) {
+            winner.innerHTML = `${playerTwo.score} Wins!!!`;
+        } else if (playerOne.score === playerTwo.score) {
+            winner.innerHTML = `It's a Draw!!! Nobody wins in war.`;
+        }
+
+        //Changes start button to reload button which will make it so you can play again
+        document.querySelector(`#startbutton`).setAttribute(`onclick`, `location.load();`);
+        document.querySelector(`#startbutton`).disabled = false;
+        document.querySelector(`#startbutton`).innerHTML = `Play Again?`; 
     }
+
+    // Change Player One's DOM
+    printCardPlayerOne(playerOneScoreUl, card) {
+        let playerOneScoreLi = document.createElement(`li`);
+        playerOneScoreLi.appendChild(document.createTextNode(card.rank + ' of ' + card.suit));
+        playerOneScoreUl.appendChild(playerOneScoreLi);
+    }
+
+    // Change Player Two's DOM
+    printCardPlayerTwo(playerTwoScoreUl, card) {
+        let playerTwoScoreLi = document.createElement(`li`);
+        playerTwoScoreLi.appendChild(document.createTextNode(card.rank + ' of ' + card.suit));
+        playerTwoScoreUl.appendChild(playerTwoScoreLi);
+    }
+
+    // Changes Score Column DOM
+    printScore(winner, compareScoresUl) {
+        let compareScoresLi = document.createElement(`li`);
+        compareScoresLi.appendChild(document.createTextNode(winner));
+        compareScoresUl.appendChild(compareScoresLi);
+    }
+
+    // Helper async function to control flow
+    timer = ms => new Promise(res => setTimeout(res, ms));
 }
 
+
+let war = new Game;
 
 
 
