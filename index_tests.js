@@ -1,4 +1,4 @@
-const expect = chai.expect;
+const expect = ('chai').expect;
 
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
