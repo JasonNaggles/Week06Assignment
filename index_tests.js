@@ -1,4 +1,5 @@
-const { assert }  = require("chai");
+const assert = require("chai").assert;
+const { Deck } = require("../index.js");
 
 
 describe('MyFunctions', function() {
@@ -13,7 +14,7 @@ it('Should return an array that is not in the same order as the original', funct
     var controlDeck = new Deck;
     var shuffleDeck = new Deck;
     shuffle = shuffleDeck.shuffle();
-    assert.notEqual(shuffle, controlDeck.deck);
+    assert.notDeepEqual(shuffle, controlDeck.deck);
 });
 
     });
