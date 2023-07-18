@@ -1,5 +1,6 @@
 const {assert}  = require("chai");
 
+var assert = chai.assert;
 
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
