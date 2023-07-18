@@ -1,9 +1,5 @@
 const expect = chai.expect;
 
-
-
-
-
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
         it('Should return an array of 52 cards', function() {
