@@ -1,6 +1,6 @@
-//const expect = chai.expect;
-//const assert = chai.assert;
-const chai = require('chai');
+const expect = chai.expect;
+const assert = chai.assert;
+
 
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
