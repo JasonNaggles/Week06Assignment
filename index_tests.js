@@ -1,4 +1,6 @@
-const expect = require('chai').expect;
+//const expect = chai.expect;
+//const assert = chai.assert;
+const chai = require('chai');
 
 describe('MyFunctions', function() {
     describe('#shuffle', function() {
