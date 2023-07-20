@@ -1,4 +1,5 @@
 let expect = chai.expect;
+let assert = chai.assert;
 
 describe('MyFunctions', () => {
     describe('#shuffle', () => {
