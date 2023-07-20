@@ -2,9 +2,9 @@
 //const assert = chai.assert;
 const chai = require('chai');
 
-describe('MyFunctions', function() {
-    describe('#shuffle', function() {
-        it('Should return an array of 52 cards', function() {
+describe('MyFunctions', () => {
+    describe('#shuffle', () => {
+        it('Should return an array of 52 cards', () => {
         var deck = new Deck;
         let shuffle = deck.shuffle();
         expect.equal(shuffle.length, 52);
