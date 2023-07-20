@@ -1,6 +1,6 @@
-//const expect = chai.expect;
-//const assert = chai.assert;
-const chai = require('chai');
+const expect = chai.expect;
+const assert = chai.assert;
+
 
 describe('MyFunctions', () => {
     describe('#shuffle', () => {
@@ -10,7 +10,7 @@ describe('MyFunctions', () => {
         expect.equal(shuffle.length, 52);
 });
 
-it('Should return an array that is not in the same order as the original', function() {
+it('Should return an array that is not in the same order as the original', () => {
     var controlDeck = new Deck;
     var shuffleDeck = new Deck;
     shuffle = shuffleDeck.shuffle();
