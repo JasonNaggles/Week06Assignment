@@ -59,36 +59,10 @@ shuffle() {
     }
     return this.deck;
 }
+playGame()
 
-}
 
-class Game {
-    constructor() {
-        this.players = [];
-    }
 
-    createPlayer(player) {
-        //let name = prompt(`Enter name of player ${player}.`, `Player ${player}`);
-
-        //while (name == '' || name === null) {
-            //name = prompt(`Who is playing? ${player}.`);
-        //}
-        //this.players.push(new Player(name));
-
-        //let playerDiv = document.querySelector('#' + player);
-        //playerDiv.textContent = name;
-    }
-
-start() {
-    this.createPlayer('one');
-    this.createPlayer('two');
-
-    let gameDeck = new deck;
-    gameDeck.shuffle();
-    gameDeck.deal(this.players[0], this.players[1]);
-
-   this.playCards(this.players[0], this.players[1]);
-}
 
 
 
