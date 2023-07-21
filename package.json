@@ -8,7 +8,7 @@
     "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "mocha './index_tests.js'"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
