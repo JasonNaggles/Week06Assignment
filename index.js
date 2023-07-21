@@ -78,8 +78,10 @@ start() {
 
 let deck = new createDeck;
 
-function stringLength(string);
+function stringLength(string) {
     return stringLength;
+}
+    
 
 let war = new Game;
 war.start()
