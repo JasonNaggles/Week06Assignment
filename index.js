@@ -29,7 +29,7 @@ class Deck {
 
 
 shuffle() {
-    for (let i = 0; i < suits.length; i--) {
+    for (let i = 0; i < this.suits.length; i--) {
         let randomIndex = Math.floor(Math.random() * (i + 1));
         let currentIndex = this.deck[i];
         this.deck[i] = this.deck[randomIndex];
