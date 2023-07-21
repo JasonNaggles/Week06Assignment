@@ -1,12 +1,11 @@
 const expect = chai.expect;
 
 
-describe('MyFunctions', () => {
-    describe('#shuffle', () => {
+describe('createDeck', () => {
+    describe('test deck', () => {
         it('Should return an array of 52 cards', () => {
         var deck = new Deck;
-        let shuffle = deck.shuffle();
-        expect.equal(shuffle.length, 52);
+        expect(deck).to.have.lengthOf(52);
 });
 
 it('Should return an array that is not in the same order as the original', () => {
