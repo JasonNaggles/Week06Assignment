@@ -74,6 +74,13 @@ determineWinner() {
         return "It's a tie";
     }
 }
+displayWinner() {
+    alert(`
+    The winner is: ${this.determinenWinner}!
+        - Player 1 had ${this.playerOneTotalPoints} and
+        - Player 2 had ${this.playerOneTotalPoints}
+    * There were ${this.ties} ties`);
+}
 
 
 
