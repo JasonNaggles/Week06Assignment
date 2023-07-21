@@ -16,6 +16,16 @@ class Players {
             return 'playerTwo'
         }
     }
+    addPoints(player) {
+        if (player == 'nobodyWon') {
+            this.ties++;
+        } else if (player == 'playerOne') {
+            this.playerOneTotalPoints++;
+        } else {
+            this.playerTwoTotalPoints++;
+        }
+    }
+
 }
 class Card {
     constructor(rank, value, suit) {
