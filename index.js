@@ -65,7 +65,15 @@ playGame() {
     let two = deck.cardDeck.pop();
     players.compareCards(one, two);
 }
-
+determineWinner() {
+    if (this.playerOneTotalPoints > this.playerTwoTotalPoints) {
+        return "Player 1";
+    } else if (this.playerOneTotalPoints < this.playerTwoTotalPoints) {
+        return "Player 2";
+    } else {
+        return "It's a tie";
+    }
+}
 
 
 
