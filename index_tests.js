@@ -1,4 +1,4 @@
-let expect = chai.expect;
+const expect = chai.expect;
 
 
 describe('MyFunctions', () => {

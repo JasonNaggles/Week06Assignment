@@ -1,3 +1,5 @@
+console.log("?????????")
+
 class Player {
     constructor(name) {
         this.name = name;
@@ -18,12 +20,10 @@ class Deck {
 
         const suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
         const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
-    
-
-
+        
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < ranks.length; j++) {
-            this.deck.push(new Card(ranks[j], j = 2, suits[i]));
+            this.deck.push(new Card(ranks[j], j + 2, suits[i]));
      }
     }
 
@@ -59,12 +59,12 @@ class Game {
         this.players.push(new Player(name));
 
         const playerDiv = document.querySelector('#' + player);
-        playerDev.textContent = name;
+        playerDiv.textContent = name;
     }
 
 start() {
     document.querySelector('#startbutton').disabled = true;
-
+    console.log("using start function")
     this.createPlayer('one');
     this.createPlayer('two');
 
@@ -72,7 +72,7 @@ start() {
     gameDeck.shuffle();
     gameDeck.deal(this.players[0], this.players[1]);
 
-    this.playCards(this.players[0], this.players[1]);
+   this.playCards(this.players[0], this.players[1]);
 }
 
 
@@ -150,6 +150,7 @@ async playCards(playerOne, playerTwo) {
 
 
 let war = new Game;
+war.start()
 
 
 
