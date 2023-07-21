@@ -81,17 +81,17 @@ displayWinner() {
         - Player 2 had ${this.playerOneTotalPoints}
     * There were ${this.ties} ties`);
 }
+}   
+let deck = new Deck;
+deck.shuffleDeck();
 
+let players = new Players;
+players.playGame();
 
-
-
-
-
-}
-    
+players.displayWinner();
 
 let war = new Game;
-war.start()
+war.start();
 
 
 
