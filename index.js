@@ -90,9 +90,6 @@ players.playGame();
 
 players.displayWinner();
 
-let war = new Game;
-war.start();
-
 
 
 
