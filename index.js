@@ -1,8 +1,20 @@
-class Player {
-    constructor(name) {
-        this.name = name;
-        this.hand = [];
-        this.score = 0;
+class Players {
+    constructor(points) {
+        this.playerOneTotalPoints = 0;
+        this.playerTwoTotalPoints = 0;
+        this.ties = 0;
+    }
+    compareCards(valuePlayerOne, valuePlayerTwo) {
+        if (valuePlayerOne.value === valuePlayerTwo.value) {
+            players.addPoints('nobobyWon')
+            return 'nobodyWon'
+        } else if (valuePlayerOne.value > valuePlayerTwo.value) {
+            players.addPoints('playerOne')
+            return 'playerOne'
+        } else {
+            players.addPoints('playerTwo')
+            return 'playerTwo'
+        }
     }
 }
 class Card {
@@ -29,7 +41,7 @@ class Deck {
 
 
 shuffle() {
-    for (let i = 0; i < this.suits.length; i--) {
+    for (let i = this.suits.length; i > 0; i--) {
         let randomIndex = Math.floor(Math.random() * (i + 1));
         let currentIndex = this.deck[i];
         this.deck[i] = this.deck[randomIndex];
@@ -37,10 +49,7 @@ shuffle() {
     }
     return this.deck;
 }
-deal(firstPlayer, secondPlayer) {
-    firstPlayer.hand = [...this.deck.slice(0, 26)];
-    secondPlayer.hand = [...this.deck.slice(26, 52)];
-    }
+
 }
 
 class Game {
