@@ -36,18 +36,41 @@ class Card {
 }
 class Deck {
     constructor() {
-        this.deck = [];
+        this.cardDeck = [];
 
         this.suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
-        this.ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
-        
-    for (let i = 0; i < this.suits.length; i++) {
-        for (let j = 0; j < this.ranks.length; j++) {
-            this.deck.push(new Card(ranks[j], j + 2, suits[i]));
-     }
-    }
 
+        let n = 0;
+        for (let i = 0; i < this.suits.length; i++) {
+        let char = '';
+        for (let x = 2; x <= 14; x++) {
+            switch (x) {
+                case 11:
+                    char = 'Jack'
+                    break;
+                case 12:
+                    char = 'Queen'
+                    break;
+                case 13:
+                    char = 'King'
+                    break;
+                case 14:
+                    char = 'Ace'
+                    break;
+                    default:
+                    char = x;
+            }
+            this.card = {
+                cardIndex: ++n,
+                suit: this.suits[i],
+                value: x,
+                character: char
+            }
+            this.cardDeck.push(this.card);
+        }
+    }
 }
+
 
 
 shuffle() {
