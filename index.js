@@ -4,11 +4,11 @@ class Deck {
 
         this.suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
 
-        let n = 0;
+        let k = 0;
         for (let i = 0; i < this.suits.length; i++) {
         let char = '';
-        for (let x = 2; x <= 14; x++) {
-            switch (x) {
+        for (let j = 2; j <= 14; j++) {
+            switch (j) {
                 case 11:
                     char = 'Jack'
                     break;
@@ -22,12 +22,12 @@ class Deck {
                     char = 'Ace'
                     break;
                     default:
-                    char = x;
+                    char = j;
             }
             this.card = {
-                cardIndex: ++n,
+                cardIndex: ++k,
                 suit: this.suits[i],
-                value: x,
+                value: j,
                 character: char
             }
             this.cardDeck.push(this.card);
@@ -38,13 +38,13 @@ class Deck {
 
 
 shuffleDeck() {
-    for (let i = this.cardDeck.length; i > 0; i--) {
+    for (let i = this.cardDeck.length - 1; i > 0; i--) {
         let randomIndex = Math.floor(Math.random() * (i + 1));
-        let currentIndex = this.cardDeck[i];
-        this.cardDeck[i] = this.cardDeck[randomIndex];
-        this.cardDeck[randomIndex] = currentIndex;
+        let hold = this.cardDeck[i]
+        this.cardDeck[i] = this.cardDeck[randomIndex]
+        this.cardDeck[randomIndex] = hold
     }
-    return this.deck;
+    
 }
 
 }
@@ -99,6 +99,7 @@ displayWinner() {
         - Player 2 had ${this.playerOneTotalPoints}
     * There were ${this.ties} ties`);
 }
+
 }   
 let deck = new Deck;
 deck.shuffleDeck();
