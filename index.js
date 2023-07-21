@@ -12,7 +12,7 @@ class Card {
         this.suit = suit;
     }
 }
-class createDeck {
+class Deck {
     constructor() {
         this.deck = [];
 
@@ -49,15 +49,15 @@ class Game {
     }
 
     createPlayer(player) {
-        let name = prompt(`Enter name of player ${player}.`, `Player ${player}`);
+        //let name = prompt(`Enter name of player ${player}.`, `Player ${player}`);
 
-        while (name == '' || name === null) {
-            name = prompt(`Who is playing? ${player}.`);
-        }
-        this.players.push(new Player(name));
+        //while (name == '' || name === null) {
+            //name = prompt(`Who is playing? ${player}.`);
+        //}
+        //this.players.push(new Player(name));
 
-        let playerDiv = document.querySelector('#' + player);
-        playerDiv.textContent = name;
+        //let playerDiv = document.querySelector('#' + player);
+        //playerDiv.textContent = name;
     }
 
 start() {
