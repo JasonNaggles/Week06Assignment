@@ -16,11 +16,11 @@ class Deck {
     constructor() {
         this.deck = [];
 
-        let suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
-        let ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+        this.suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
+        this.ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
         
-    for (let i = 0; i < suits.length; i++) {
-        for (let j = 0; j < ranks.length; j++) {
+    for (let i = 0; i < this.suits.length; i++) {
+        for (let j = 0; j < this.ranks.length; j++) {
             this.deck.push(new Card(ranks[j], j + 2, suits[i]));
      }
     }
