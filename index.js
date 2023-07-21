@@ -18,8 +18,8 @@ class Deck {
     constructor() {
         this.deck = [];
 
-        const suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
-        const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+        let suits = ['Spades', 'Hearts', 'Clubs', 'Diamonds'];
+        let ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
         
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < ranks.length; j++) {
@@ -58,7 +58,7 @@ class Game {
         }
         this.players.push(new Player(name));
 
-        const playerDiv = document.querySelector('#' + player);
+        let playerDiv = document.querySelector('#' + player);
         playerDiv.textContent = name;
     }
 
