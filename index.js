@@ -12,7 +12,7 @@ class Card {
         this.suit = suit;
     }
 }
-class Deck {
+class createDeck {
     constructor() {
         this.deck = [];
 

@@ -1,7 +1,7 @@
 let expect = chai.expect;
 
 
-describe('create the Deck()', () => {
+describe('createDeck()', () => {
     describe('test the deck', () => {
         it('Should return an array of 52 cards', () => {
         expect(deck).to.have.lengthOf(52);
