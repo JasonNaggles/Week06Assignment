@@ -61,12 +61,10 @@ class Game {
     }
 
 start() {
-    document.querySelector('#startbutton').disabled = true;
-    console.log("using start function")
     this.createPlayer('one');
     this.createPlayer('two');
 
-    const gameDeck = new Deck;
+    const gameDeck = new deck;
     gameDeck.shuffle();
     gameDeck.deal(this.players[0], this.players[1]);
 
