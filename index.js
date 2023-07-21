@@ -1,5 +1,3 @@
-let deck = new Deck;
-
 class Player {
     constructor(name) {
         this.name = name;
