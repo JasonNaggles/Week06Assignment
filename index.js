@@ -64,7 +64,7 @@ start() {
     this.createPlayer('one');
     this.createPlayer('two');
 
-    const gameDeck = new deck;
+    let gameDeck = new deck;
     gameDeck.shuffle();
     gameDeck.deal(this.players[0], this.players[1]);
 
