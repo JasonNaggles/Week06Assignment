@@ -59,20 +59,19 @@ shuffle() {
     }
     return this.deck;
 }
-playGame()
-
-
-
-
-
-
-
+playGame() {
+    while(deck.cardDeck.length > 0);
+    let one = deck.cardDeck.pop();
+    let two = deck.cardDeck.pop();
+    players.compareCards(one, two);
 }
 
-let deck = new createDeck;
 
-function stringLength(string) {
-    return stringLength;
+
+
+
+
+
 }
     
 
