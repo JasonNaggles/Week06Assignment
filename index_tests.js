@@ -4,7 +4,7 @@ const expect = chai.expect;
 describe('MyFunctions', () => {
     describe('#shuffle', () => {
         it('Should return an array of 52 cards', () => {
-        var deck = new deck;
+        var deck = new Deck;
         let shuffle = deck.shuffle();
         expect.equal(shuffle.length, 52);
 });
@@ -12,7 +12,7 @@ describe('MyFunctions', () => {
 it('Should return an array that is not in the same order as the original', () => {
     var controlDeck = new Deck;
     var shuffleDeck = new Deck;
-    shuffle = shuffleDeck.shuffle();
+    let shuffle = shuffleDeck.shuffle();
     expect.notequal(shuffle, controlDeck.deck);
 });
 
