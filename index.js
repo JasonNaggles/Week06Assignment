@@ -39,7 +39,7 @@ class Deck {
 
 shuffleDeck() {
     for (let i = this.cardDeck.length - 1; i > 0; i--) {
-        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let randomIndex = Math.floor(Math.random() * (i + 1))
         let hold = this.cardDeck[i]
         this.cardDeck[i] = this.cardDeck[randomIndex]
         this.cardDeck[randomIndex] = hold
