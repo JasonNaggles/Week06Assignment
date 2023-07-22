@@ -63,7 +63,7 @@ class Players {
             console.log('playerOne');
         } else {
             this.addPoints('playerTwo')
-            console.log('playerTwo')
+            console.log('playerTwo');
         }
     }
     addPoints(player) {
