@@ -1,6 +1,7 @@
 let expect = chai.expect;
 
 let controlDeck = new Deck();
+let controlDeck2 = new Deck();
 let cardDeck = controlDeck.cardDeck.slice();
 
 controlDeck.shuffleDeck();
