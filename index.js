@@ -1,5 +1,4 @@
-let one;
-let two;
+
 
 class Deck {
     constructor() {
