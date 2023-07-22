@@ -1,5 +1,10 @@
 let expect = chai.expect;
 
+let controlDeck = new Deck();
+let cardDeck = controlDeck.cardDeck.slice();
+
+controlDeck.shuffleDeck();
+let shuffle = controlDeck.cardDeck;
 
 describe('createDeck()', () => {
     describe('test the deck', () => {
