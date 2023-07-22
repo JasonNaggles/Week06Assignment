@@ -13,7 +13,7 @@ describe('createDeck()', () => {
 });
 
 it('Should return an array that is not in the same order as the original', () => {
-    expect.notequal(shuffle, controlDeck.deck);
+    expect(controlDeck.cardDeck).to.not.equal(controlDeck2.cardDeck);
 });
 
     });
