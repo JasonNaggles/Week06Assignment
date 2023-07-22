@@ -58,23 +58,26 @@ class Players {
     }
     compareCards(valuePlayerOne, valuePlayerTwo) {
         if (valuePlayerOne.value === valuePlayerTwo.value) {
-            players.addPoints('nobobyWon')
+            this.addPoints('nobobyWon')
             console.log('nobodyWon');
         } else if (valuePlayerOne.value > valuePlayerTwo.value) {
-            players.addPoints('playerOne')
+            this.addPoints('playerOne')
             console.log('playerOne');
         } else {
-            players.addPoints('playerTwo')
+            this.addPoints('playerTwo')
             console.log('playerTwo')
         }
     }
     addPoints(player) {
         if (player == 'nobodyWon') {
             this.ties++;
+            console.log('nobodyWon');
         } else if (player == 'playerOne') {
             this.playerOneTotalPoints++;
+            console.log('playerOne');
         } else {
             this.playerTwoTotalPoints++;
+            console.log('playerTwo');
         }
     }
 
@@ -85,8 +88,13 @@ playGame(deck) {
         let cardPlayerTwo = deck.cardDeck.pop(); // Draw a card for player two
         this.compareCards(cardPlayerOne, cardPlayerTwo);
     }
-}
 
+    if (this.playerOneTotalPoints === this.playerTwoTotalPoints) {
+        console.log("It's a tie!");
+    } else {
+        this.displayWinner();
+}
+}
 
 determineWinner() {
     if (this.playerOneTotalPoints > this.playerTwoTotalPoints) {
@@ -98,8 +106,8 @@ determineWinner() {
     }
 }
 displayWinner() {
-    alert(`
-    The winner is: ${this.determinenWinner}!
+    console.log(`
+    The winner is: ${this.determineWinner}!
         - Player 1 had ${this.playerOneTotalPoints} and
         - Player 2 had ${this.playerOneTotalPoints}
     * There were ${this.ties} ties`)
