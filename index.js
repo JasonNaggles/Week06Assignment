@@ -81,8 +81,8 @@ class Players {
 
 playGame(deck) {
     while(deck.cardDeck.length > 0) {
-        const cardPlayerOne = deck.cardDeck.pop(); // Draw a card for player one
-        const cardPlayerTwo = deck.cardDeck.pop(); // Draw a card for player two
+        let cardPlayerOne = deck.cardDeck.pop(); // Draw a card for player one
+        let cardPlayerTwo = deck.cardDeck.pop(); // Draw a card for player two
         this.compareCards(cardPlayerOne, cardPlayerTwo);
     }
 }
@@ -102,7 +102,7 @@ displayWinner() {
     The winner is: ${this.determinenWinner}!
         - Player 1 had ${this.playerOneTotalPoints} and
         - Player 2 had ${this.playerOneTotalPoints}
-    * There were ${this.ties} ties`);
+    * There were ${this.ties} ties`)
 }
 
 }   
