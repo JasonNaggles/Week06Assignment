@@ -1,3 +1,6 @@
+let one;
+let two;
+
 class Deck {
     constructor() {
         this.cardDeck = [];
@@ -57,13 +60,13 @@ class Players {
     compareCards(valuePlayerOne, valuePlayerTwo) {
         if (valuePlayerOne.value === valuePlayerTwo.value) {
             players.addPoints('nobobyWon')
-            return 'nobodyWon'
+            console.log('nobodyWon');
         } else if (valuePlayerOne.value > valuePlayerTwo.value) {
             players.addPoints('playerOne')
-            return 'playerOne'
+            console.log('playerOne');
         } else {
             players.addPoints('playerTwo')
-            return 'playerTwo'
+            console.log('playerTwo')
         }
     }
     addPoints(player) {
@@ -78,11 +81,12 @@ class Players {
 
 
 playGame() {
-    while(deck.cardDeck.length > 0);
-    let one = deck.cardDeck.pop();
-    let two = deck.cardDeck.pop();
-    players.compareCards(one, two);
+    while(deck.cardDeck.length > 0) {
+
+    }
 }
+
+
 determineWinner() {
     if (this.playerOneTotalPoints > this.playerTwoTotalPoints) {
         return "Player 1";
