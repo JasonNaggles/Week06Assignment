@@ -1,5 +1,3 @@
-
-
 class Deck {
     constructor() {
         this.cardDeck = [];
