@@ -79,9 +79,11 @@ class Players {
     }
 
 
-playGame() {
+playGame(deck) {
     while(deck.cardDeck.length > 0) {
-
+        const cardPlayerOne = deck.cardDeck.pop(); // Draw a card for player one
+        const cardPlayerTwo = deck.cardDeck.pop(); // Draw a card for player two
+        this.compareCards(cardPlayerOne, cardPlayerTwo);
     }
 }
 
@@ -104,11 +106,11 @@ displayWinner() {
 }
 
 }   
-let deck = new Deck;
+let deck = new Deck();
 deck.shuffleDeck();
 
-let players = new Players;
-players.playGame();
+let players = new Players();
+players.playGame(deck);
 
 players.displayWinner();
 
