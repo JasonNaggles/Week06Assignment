@@ -86,6 +86,7 @@ playGame(deck) {
         let cardPlayerTwo = deck.cardDeck.pop(); // Draw a card for player two
         this.compareCards(cardPlayerOne, cardPlayerTwo);
     }
+        
 
     if (this.playerOneTotalPoints === this.playerTwoTotalPoints) {
         console.log("It's a tie!");
