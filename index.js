@@ -105,7 +105,7 @@ determineWinner() {
 }
 displayWinner() {
     console.log(`
-    The winner is: ${this.determineWinner}!
+    The winner is: ${this.determineWinner()}!
         - Player 1 had ${this.playerOneTotalPoints} and
         - Player 2 had ${this.playerOneTotalPoints}
     * There were ${this.ties} ties`)
